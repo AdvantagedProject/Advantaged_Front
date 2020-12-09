@@ -93,28 +93,28 @@
                         <div class="widget">
                             <h2 class="widget-title">리워드</h2>
                             <div class="list-group">
-                                <a href="#" class="list-group-item list-group-item-action">
+                                <a class="list-group-item list-group-item-action">
                                     <div class="d-flex w-100 justify-content-between">
                                         <h2 class="mb-1">집밥 허선생 풀패키지</h2>
                                     </div>
                                     <p class="mb-1">재료를 포함한 모든 서비스 제공</p>
                                     <small>비용: 135,000원</small>
                                 </a>
-                                <a href="#" class="list-group-item list-group-item-action">
+                                <a class="list-group-item list-group-item-action">
                                     <div class="d-flex w-100 justify-content-between">
                                         <h2 class="mb-1">집밥 허선생 풀패키지</h2>
                                     </div>
                                     <p class="mb-1">재료를 포함한 모든 서비스 제공</p>
                                     <small>비용: 135,000원</small>
                                 </a>
-                                <a href="#" class="list-group-item list-group-item-action">
+                                <a class="list-group-item list-group-item-action">
                                     <div class="d-flex w-100 justify-content-between">
                                         <h2 class="mb-1">집밥 허선생 풀패키지</h2>
                                     </div>
                                     <p class="mb-1">재료를 포함한 모든 서비스 제공</p>
                                     <small>비용: 135,000원</small>
                                 </a>
-                                <a href="#" class="list-group-item list-group-item-action">
+                                <a class="list-group-item list-group-item-action">
                                     <div class="d-flex w-100 justify-content-between">
                                         <h2 class="mb-1">집밥 허선생 풀패키지</h2>
                                     </div>
@@ -122,6 +122,18 @@
                                     <small>비용: 135,000원</small>
                                 </a>
                             </div>
+                            <script>
+                                var header = document.getElementById("list-group");
+                                var list = header.getElementsByClassName("list-group-item-action");
+                                for (var i = 0; i < list.length; i++) {
+                                    console.log(list.length)
+                                    list[i].addEventListener("click", function () {
+                                        var current = document.getElementsByClassName("active");
+                                        current[0].className = current[0].className.replace(" active", "");
+                                        this.className += " active";
+                                    });
+                                }
+                            </script>
 
                             <p style=" margin-bottom: 2%">75% 펀딩 중</p>
                             <div class="progress">
